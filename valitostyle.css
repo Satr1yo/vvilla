@@ -1,0 +1,243 @@
+body {
+  background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+ 
+h2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container {
+  background-color: #f5f5dc;
+  padding: 3%;
+  border-radius: 5px;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+.navbar img {
+  height: 50px;
+  margin: 0 30px;
+}
+/* carousel pertama */
+.hero-section {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-section img {
+  width: 100%;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-section .content h1 {
+  font-size: 2.5rem;
+}
+
+.hero-section .content p {
+  font-size: 1.25rem;
+}
+/* booking form */
+.btn {
+  background-color: #8B6A4E
+}
+
+.booking-form {
+background-color: #faf8f9;
+padding: 20px;
+border-radius: 5px;
+margin-top: -50px;
+ z-index: 1;
+position: relative;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+ /* card*/
+.service-card {
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.service-card img { 
+    width: 100%;
+    
+}
+.service-card .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+
+/* footer */
+        
+.footer {
+  background-color: #f5f5dc;
+  padding: 40px 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #333;
+}
+
+.footer h1,
+.footer h5 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #8B6A4E;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #8B6A4E;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.footer .text-center {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* room */
+.room-card {
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+.room-card img {
+  width: 100%;
+  height: auto;
+}
+.room-details {
+  padding: 15px;
+  background-color: white;
+}
+.room-title {
+  font-size: 24px;
+  font-weight: bold;
+  
+}
+.room-price {
+  font-size: 20px;
+  color: #333;
+}
+.room-info {
+  font-size: 14px;
+  color: #007bff;
+}
+.room-rates {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.room-rates div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.room-total {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ddd;
+}
+.room-total .price {
+  font-size: 18px;
+  font-weight: bold;
+}
+/*MOBILE DEVICE  */
+@media (max-width: 768px) {
+  .hero-section .content h1 {
+      font-size: 1.5rem; /* Ukuran font lebih kecil */
+  }
+
+  .hero-section .content p {
+      font-size: 1rem;
+  }
+
+  .navbar img {
+      height: 30px; /* Logo lebih kecil untuk perangkat kecil */
+  }
+
+  .booking-form {
+      flex-wrap: wrap;
+      row-gap: 10px;
+  }
+
+  .booking-form .col-md-3,
+  .booking-form .col-md-2,
+  .booking-form .col-md-1 {
+      width: 100%; /* Elemen penuh satu baris */
+      margin-bottom: 10px;
+  }
+
+  .title {
+    font-size: 20px;
+}
+
+.description {
+    font-size: 14px;
+}
+
+  .footer h1 {
+      font-size: 1.2rem;
+  }
+
+  .footer h5 {
+      font-size: 0.9rem;
+  }
+}
+/* carousel pertama */
+.d-block.w-100 {
+height: auto; /* Biarkan tinggi otomatis untuk responsivitas */
+}
+
+@media (min-width: 992px) { /* Untuk layar desktop ke atas */
+.d-block.w-100 {
+    max-height: 500px; /* Batasi tinggi maksimum pada desktop */
+    object-fit: cover; /* Sesuaikan gambar agar tetap terlihat bagus */
+}
+}
