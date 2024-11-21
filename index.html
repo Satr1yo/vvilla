@@ -1,0 +1,336 @@
+<html>
+ <head>
+  <title>
+   Home
+  </title>
+  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <!-- <img src="assets/logo.png" alt="" srcset="">  -->
+            <a class="navbar-brand" href="#">Vibes Hospitality</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Service</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#collections">Our Collections</a>
+                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- First Slide -->
+              <div class="carousel-item active">
+                <div class="hero-section">
+                  <img src="assets/newtamansari4.jpg" class="d-block w-100" alt="Hero Image">
+                  <div class="overlay"></div>
+                  <div class="content">
+                    <h1>New Taman Sari</h1>
+                    <p>Central Lombok</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Second Slide -->
+              <div class="carousel-item">
+                <div class="hero-section">
+             <img src="assets/v3.jpg" class="d-block w-100" alt="Hero Image">
+                  <div class="overlay"></div>
+                  <div class="content">
+                    <h1>Teraum Villa</h1>
+                     <p>Central Lombok</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Third Slide -->
+              <div class="carousel-item">
+                <div class="hero-section">
+             <img src="assets/v3.jpg" class="d-block w-100" alt="Hero Image">
+                  <div class="overlay"></div>
+                  <div class="content">
+                    <h1>Valito Villa</h1>
+                     <p>Central Lombok</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Fourth Slide -->
+              <div class="carousel-item">
+                <div class="hero-section">
+             <img src="assets/kies/kies1.jpg" class="d-block w-100" alt="Hero Image">
+                  <div class="overlay"></div>
+                  <div class="content">
+                    <h1>KIES Villas </h1>
+                     <p>Central Lombok</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Fifth Slide -->
+              <div class="carousel-item">
+                <div class="hero-section">
+             <img src="assets/v3.jpg" class="d-block w-100" alt="Hero Image">
+                  <div class="overlay"></div>
+                  <div class="content">
+                    <h1>Village Vibes </h1>
+                     <p>Central Lombok</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Sixth Slide -->
+              <div class="carousel-item">
+                <div class="hero-section">
+             <img src="assets/v3.jpg" class="d-block w-100" alt="Hero Image">
+                  <div class="overlay"></div>
+                  <div class="content">
+                    <h1>KIAYAZO Vibes</h1>
+                     <p>Central Lombok</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Seventh Slide -->
+              <div class="carousel-item">
+                <div class="hero-section">
+             <img src="assets/v3.jpg" class="d-block w-100" alt="Hero Image">
+                  <div class="overlay"></div>
+                  <div class="content">
+                    <h1>Sajang Glamping & Coffee Specialties</h1>
+                     <p>Central Lombok</p>
+                  </div>
+                </div>
+              </div>
+
+              
+              <!-- Add more slides as needed -->
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          
+  <div class="container booking-form">
+   <div class="row g-2">
+    <div class="col-12 col-sm-6 col-md-3">
+      <select id="pilihan" class="form-control" name="pilihan" onchange="window.location.href=this.value;">
+        <option value="" disabled selected>Pilih Villa</option>
+            <option value="newtamansari.html">New Taman Sari</option>
+            <option value="teraum.html">Teraum Villa</option>
+            <option value="valito">Valito Villa</option>
+            <option value="kies.html">KIES Villas Lombok</option>
+            <option value="villagevibes">Village Vibes Lombok</option>
+            <option value="kiayazo">KIAYAZO Vibes Inn</option>
+            <option value="TIKAS">TIKAS Lombok</option>
+            <option value="sajang">Sajang Glamping & Coffee Specialties</option>
+        </select>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+     <input class="form-control" placeholder="check in" type="date"/>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+     <input class="form-control" placeholder="check out" type="date"/>
+    </div>
+    <div class="col-md-2">
+     <input class="form-control" placeholder="promo code" type="text"/>
+    </div>
+    <div class="col-md-1">
+     <button class="btn btn-primary">
+      BOOK NOW
+     </button>
+    </div>
+   </div>
+  </div>
+  <div id="collectionsCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- First Slide -->
+      <div class="carousel-item active">
+        <div class="collections-section py-4">
+          <div class="container">
+            <h2 class="text-center mb-4">Our Collections</h2>
+            <div class="row gy-4">
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <img alt="New Taman Sari" class="card-img-top" src="assets/newtamansari4.jpg" />
+                  <div class="card-body">
+                    <h5 class="card-title">New Taman Sari</h5>
+                    <p class="card-text">Explore the serenity and charm of New Taman Sari...</p>
+                    <a class="btn btn-primary w-100" href="newtamansari.html">Learn More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <img alt="Teruum Villa" class="card-img-top" src="assets/v4.jpg" />
+                  <div class="card-body">
+                    <h5 class="card-title">Teraum Villa</h5>
+                    <p class="card-text">Discover luxury and comfort at Teruum Villa...</p>
+                    <a class="btn btn-primary w-100" href="#">Learn More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <img alt="Vallo Villa" class="card-img-top" src="assets/1.jpg" />
+                  <div class="card-body">
+                    <h5 class="card-title">Vallito Villa</h5>
+                    <p class="card-text">Experience tranquility and style at Vallito Villa...</p>
+                    <a class="btn btn-primary w-100" href="#">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Second Slide -->
+      <div class="carousel-item">
+        <div class="collections-section py-4">
+          <div class="container">
+            <h2 class="text-center mb-4">Our Collections</h2>
+            <div class="row gy-4">
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <img alt="Card 4" class="card-img-top" src="assets/kies/kies1.jpg" />
+                  <div class="card-body">
+                    <h5 class="card-title">Kies Villas</h5>
+                    <p class="card-text">Relax in the modern charm of Kies Villas</p>
+                    <a class="btn btn-primary w-100" href="kies.html">Learn More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <img alt="Card 5" class="card-img-top" src="assets/v2.jpg" />
+                  <div class="card-body">
+                    <h5 class="card-title">Taman Sari</h5>
+                    <p class="card-text">Discover breathtaking views at Taman Sari...</p>
+                    <a class="btn btn-primary w-100" href="newtamansari.html">Learn More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <img alt="Card 6" class="card-img-top" src="assets/v3.jpg" />
+                  <div class="card-body">
+                    <h5 class="card-title">Village Vibes Villa</h5>
+                    <p class="card-text">Experience serene village life with modern amenities...</p>
+                    <a class="btn btn-primary w-100" href="#">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#collectionsCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#collectionsCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+ 
+<!-- service card -->
+<div class="container">
+  <h2><center>Our Service </center></h2> <br>
+  <!-- Section 1 -->
+  <div class="row section">
+      <div class="col-md-6">
+          <img alt="Conference room with blue chairs and tables set up for a meeting" 
+              class="image" 
+              src="https://storage.googleapis.com/a1aa/image/MgjltUSHlspSAdMvcNVlGnaYSWgHgM2Hq22ibfAB8KxuDP5JA.jpg" />
+      </div>
+      <div class="col-md-6">
+          <div class="title">
+            Full Manage
+          </div>
+          <div class="description">
+            Vibes Hospitality is actively involved in the sales, marketing, and distributions in supporting the property’s strategy to ensure consistent results in maximizing hotel revenues.
+          </div>
+      </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="row section">
+      <div class="col-md-6">
+          <div class="title">
+            Sales, Marketing & Distribution
+          </div>
+          <div class="description">
+            “Revenue gaining is one of our main business targets. We, at ViBES Hospitality dedicate qualified team members, sales and marketing network, big database as well as distribution channel and system. This whole system is applied to all of our hotel units”
+          </div>
+      </div>
+      <div class="col-md-6">
+          <img alt="Conference room with red chairs and a chandelier" 
+              class="image" 
+              src="https://storage.googleapis.com/a1aa/image/CIatibq1f72vXS1qffYS0GY3A6fbwJuUv3Qt7X9Dwxfk7wTeE.jpg" />
+      </div>
+  </div>
+
+</div>
+<br>
+<br>
+
+
+<footer class="footer">
+  <div class="container">
+      <div class="row">
+          <!-- Bagian Kiri -->
+          <div class="col-md-6 col-sm-12" id="about">
+              <h1>Hotel and Natural Resources</h1>
+              <p>
+                  Vibes Hospitality has developed an advanced system in boosting the performances of each unit business under our network and Managements. 
+                  With our extensive knowledge, expertise, and experiences in the hospitality industry, we are committed to providing support for your needs and maximizing your return on investment.
+              </p>
+          </div>
+
+          <!-- Bagian Kanan -->
+          <div class="col-md-6 col-sm-12">
+              <h5>Contact Us</h5>
+              <p>Email: info@vibeshotelsandresorts.com</p>
+              <p>Phone: +62 812 3456 7890</p>
+              <p>Address: Jl. Raya Kuta Mawun, Kuta - Praya, Nusa Tenggara Barat</p>
+              <h5>Visit Us:</h5>
+              <p><a href="http://www.vibeshotelsandresorts.com" target="_blank">www.vibeshotelsandresorts.com</a></p>
+          </div>
+      </div>
+      <div class="text-center mt-3">
+          <p>&copy; 2024 Vibes Hospitality. All rights reserved.</p>
+      </div>
+  </div>
+</footer>
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </script>
+ </body>
+</html>
