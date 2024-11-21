@@ -3,7 +3,9 @@ body {
 background-color: #f8f9fa;
 font-family: Arial, sans-serif;
  }
- 
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 h2 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -89,6 +91,8 @@ margin-top: -50px;
 position: relative;
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
 /* carousel card */
 
 .collections-section h2 {

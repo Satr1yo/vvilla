@@ -2,7 +2,10 @@ body {
   background-color: #f8f9fa;
             font-family: Arial, sans-serif;
         }
- 
+        h1 {
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
 h2 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -12,6 +15,7 @@ h2 {
   padding: 3%;
   border-radius: 5px;
 }
+
 
 /* navbar */
 .navbar {
