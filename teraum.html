@@ -1,11 +1,14 @@
 <html>
  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
    Teraum Villas
   </title>
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://e1-booking.com/booking/css/bootstrap-datepicker3.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://e1-booking.com/booking/js/bootstrap-datepicker.js"></script>
 
   <link rel="stylesheet" href="teraumstyle.css">
  </head>
@@ -87,41 +90,34 @@
       </button>
     </div>
           
-  <div class="container booking-form">
-   <div class="row">
-    <div class="col-md-3">
-      <label class="form-placeholder" for="check-out">Choose Villa</label>
-      <select id="pilihan" class="form-control" name="pilihan" onchange="window.location.href=this.value;">
-        <option value="" disabled selected>Villa</option>
-        <!-- <option value="newtamansari.html">New Taman Sari</option> -->
-        <option value="teraum.html">Teraum Villa</option>
-        <option value="valito.html">Valito Villa</option>
-        <option value="kies.html">KIES Villas Lombok</option>
-        <!-- <option value="index.html">Village Vibes Lombok</option>
-        <option value="index.html">KIAYAZO Vibes Inn</option>
-        <option value="index.html">TIKAS Lombok</option>
-        <option value="index.html">Sajang Glamping & Coffee Specialties</option> -->
-    </select>
-    </div>
-    <div class="col-md-3">
-      <label class="form-placeholder" for="check-out">Check In</label>
-
-     <input class="form-control" placeholder="check in" type="date"/>
-    </div>
-    <div class="col-md-3">
-      <label class="form-placeholder" for="check-out">Check Out</label>
-
-     <input class="form-control" placeholder="check out" type="date"/>
-    </div>
-    <div class="col-md-2">
-      <label class="form-placeholder" for="check-out">Insert promo</label>
-     <input class="form-control" placeholder="promo code" type="text"/>
-    </div>
-    <div class="col-md-1">
-      <a href="https://www.e1-booking.com/booking/villa-valito_5820.html" class="btn btn-primary">  BOOK NOW</a>
-    </div>
+    <div class="container booking-form">
+      <div class="row">
+         <div class="col-md-3">
+            <label class="form-placeholder" for="villa">Choose Villa</label>
+            <select id="pilihan" class="form-control" name="pilihan" onchange="window.location.href=this.value;">
+               <option value="" disabled selected>Villa</option>
+               <option value="teraum.html">Teraum Villa</option>
+               <option value="valito.html">Valito Villa</option>
+               <option value="kies.html">KIES Villas Lombok</option>
+            </select>
+         </div>
+         <div class="col-md-3">
+            <label class="form-placeholder" for="dpd1">Check In</label>
+            <input placeholder="Check In" value="" type="text" class="form-control" id="dpd1" name="start" readonly>
+         </div>
+         <div class="col-md-3">
+            <label class="form-placeholder" for="dpd2">Check Out</label>
+            <input placeholder="Check Out" value="" type="text" class="form-control" id="dpd2" name="end" readonly>
+         </div>
+         <div class="col-md-2">
+            <label class="form-placeholder" for="promo_code">Promo Code</label>
+            <input id="promo_code" placeholder="Promo Code" type="text" class="form-control">
+         </div>
+         <div class="col-md-1">
+            <button id="booking" type="button" class="btn btn-primary w-120">Book Now</button>
+         </div>
+      </div>
    </div>
-  </div>
   
   <!-- card -->
   <div class="container mt-4">
@@ -434,6 +430,27 @@
     });
   </script>
   
+  <script>
+    var nowTemp=new Date();
+    var now=new Date(nowTemp.getFullYear(),nowTemp.getMonth(),nowTemp.getDate(),0,0,0,0);
+    var checkin=$("#dpd1").datepicker({format:"dd-mm-yyyy",onRender:function(a){return a.valueOf()<now.valueOf()?"disabled":""}}).on("changeDate",function(b){if(b.date.valueOf()>checkout.date.valueOf()){var a=new Date(b.date);
+    a.setDate(a.getDate()+1);checkout.setValue(a)}checkin.hide();$("#dpd2")[0].focus()}).data("datepicker");
+    var checkout=$("#dpd2").datepicker({format:"dd-mm-yyyy",orientation:"top left",onRender:function(a){return a.valueOf()<=checkin.date.valueOf()?"disabled":""}}).on("changeDate",function(a){
+                                    var check_in=$("#dpd1").val();
+                                    var check_out=$("#dpd2").val();
+                                    checkout.hide();
+    }).data("datepicker");
+    
+    $( "#booking" ).click(function() {
+      var check_in=$("#dpd1").val();
+      var check_out=$("#dpd2").val();
+      var promo=$("#promo_code").val();
+      var property_id="5820";
+      window.open("https://e1-booking.com/booking/booking-page.php?checkin=" + check_in + "&checkout=" + check_out + "&id=" + property_id + "&promo=" + promo);
+  
+    });
+    
+  </script>
 
  </body>
 </html>

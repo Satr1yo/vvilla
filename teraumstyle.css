@@ -71,19 +71,46 @@ h2 {
   font-size: 1.25rem;
 }
 /* booking form */
-.btn {
-  background-color: #8B6A4E
+/* booking form */
+.booking-form {
+  background-color: #faf8f9;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: -50px;
+   z-index: 1;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+.booking-form .form-control {
+  height: 40px;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 4px;
 }
 
-.booking-form {
-background-color: #faf8f9;
-padding: 20px;
-border-radius: 5px;
-margin-top: -50px;
- z-index: 1;
-position: relative;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.booking-form .btn-primary {
+  background-color: #8B6A4E;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  
 }
+
+.booking-form .form-placeholder {
+  font-size: 12px;
+  color: #6c757d;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.booking-form .mt-3 {
+  margin-top: 20px;
+}
+
+.booking-form .w-100 {
+  width: 100%;
+}
+
  /* card*/
 .service-card {
     position: relative;
