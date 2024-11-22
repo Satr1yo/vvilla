@@ -130,34 +130,47 @@ object-fit: cover;
   filter: invert(100%);
 }
 
-/* service card */
+/* Styling untuk Section */
 .section {
   margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center; /* Untuk memastikan konten tetap di tengah */
+  gap: 20px; /* Memberikan jarak antar elemen */
 }
 
-/* Image Styling */
+/* Styling untuk Kolom */
+.col-md-6 {
+  flex: 1 1 45%; /* Pastikan kolom menyesuaikan ukuran dengan layar */
+  max-width: 500px; /* Maksimum lebar kolom */
+  text-align: center; /* Pastikan teks rata tengah di layar kecil */
+}
+
+/* Styling untuk Gambar */
 .image {
-  width: 100%;
-  height: auto;
+  width: 100%; /* Gambar mengikuti lebar kolom */
+  max-width: 400px; /* Maksimum lebar gambar */
+  height: auto; /* Memastikan proporsi gambar tetap */
   border-radius: 8px;
-  margin-bottom: 20px;
+  object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+  margin: 0 auto; /* Gambar tetap di tengah */
 }
 
-/* Text Styling */
+/* Styling untuk Judul dan Deskripsi */
 .title {
   font-size: 24px;
   font-weight: bold;
   color: #8b5e3c;
   margin-bottom: 10px;
+  text-align: center; /* Pastikan rata tengah di layar kecil */
 }
 
 .description {
   font-size: 16px;
   color: #333;
   line-height: 1.6;
+  text-align: center; /* Pastikan rata tengah di layar kecil */
 }
 
         /* footer */
@@ -194,6 +207,7 @@ object-fit: cover;
           font-size: 0.9rem;
           color: #555;
       }
+      
       
  
   /*MOBILE DEVICE  */
@@ -236,6 +250,15 @@ object-fit: cover;
 
     .footer h5 {
         font-size: 0.9rem;
+    }
+
+    .section {
+      flex-direction: column; /* Susun secara vertikal */
+    }
+  
+    .col-md-6 {
+      flex: 1 1 100%; /* Kolom mengambil lebar penuh */
+      max-width: 100%; /* Hapus batas maksimum */
     }
 }
 /* carousel pertama */

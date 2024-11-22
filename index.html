@@ -9,6 +9,8 @@
  </head>
  <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <img src="assets/logo.png" alt="" srcset=""> 
+
         <div class="container-fluid">
           <!-- <img src="assets/logo.png" alt="" srcset="">  -->
             <a class="navbar-brand" href="#">Vibes Hospitality</a>
@@ -133,28 +135,31 @@
   <div class="container booking-form">
    <div class="row g-2">
     <div class="col-12 col-sm-6 col-md-3">
+      <label class="form-placeholder" for="check-out">Choose Villa</label>
+
       <select id="pilihan" class="form-control" name="pilihan" onchange="window.location.href=this.value;">
         <option value="" disabled selected>Pilih Villa</option>
-            <option value="newtamansari.html">New Taman Sari</option>
+            <!-- <option value="newtamansari.html">New Taman Sari</option> -->
             <option value="teraum.html">Teraum Villa</option>
             <option value="valito.html">Valito Villa</option>
             <option value="kies.html">KIES Villas Lombok</option>
-            <option value="villagevibes">Village Vibes Lombok</option>
+            <!-- <option value="villagevibes">Village Vibes Lombok</option>
             <option value="kiayazo">KIAYAZO Vibes Inn</option>
             <option value="TIKAS">TIKAS Lombok</option>
-            <option value="sajang">Sajang Glamping & Coffee Specialties</option>
+            <option value="sajang">Sajang Glamping & Coffee Specialties</option> -->
         </select>
     </div>
     <div class="col-12 col-sm-6 col-md-3">
-      <label class="form-placeholder" for="check-in">Check In</label>
-     <input class="form-control" placeholder="check in" type="date"/>
+      <label class="form-placeholder" for="check-out">Check In</label>
+      <input class="form-control" placeholder="check in" type="date"/>
     </div>
     <div class="col-12 col-sm-6 col-md-3">
       <label class="form-placeholder" for="check-out">Check Out</label>
      <input class="form-control" placeholder="check out" type="date"/>
     </div>
     <div class="col-md-2">
-     <input class="form-control" placeholder="promo code" type="text"/>
+      <label class="form-placeholder" for="check-out">Insert Promo Code</label>
+     <input class="form-control" placeholder="promo Code" type="text"/>
     </div>
     <div class="col-md-1">
      <button class="btn btn-primary">
@@ -171,7 +176,7 @@
           <div class="container">
             <h2 class="text-center mb-4">Our Collections</h2>
             <div class="row gy-4">
-              <div class="col-md-4">
+              <!-- <div class="col-md-4">
                 <div class="card h-100">
                   <img alt="New Taman Sari" class="card-img-top" src="assets/newtamansari4.jpg" />
                   <div class="card-body">
@@ -180,34 +185,43 @@
                     <a class="btn btn-primary w-100" href="newtamansari.html">Learn More</a>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <div class="col-md-4">
                 <div class="card h-100">
-                  <img alt="Teruum Villa" class="card-img-top" src="assets/v4.jpg" />
+                  <img alt="Teruum Villa" class="card-img-top" src="assets/teraum/rooms/teraumm1.jpg" />
                   <div class="card-body">
                     <h5 class="card-title">Teraum Villa</h5>
                     <p class="card-text">Discover luxury and comfort at Teruum Villa...</p>
-                    <a class="btn btn-primary w-100" href="#">Learn More</a>
+                    <a class="btn btn-primary w-100" href="teraum.html">Learn More</a>
                   </div>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="card h-100">
-                  <img alt="Vallo Villa" class="card-img-top" src="assets/1.jpg" />
+                  <img alt="Vallo Villa" class="card-img-top" src="assets/teraum/rooms/teraumm1.jpg" />
                   <div class="card-body">
                     <h5 class="card-title">Vallito Villa</h5>
                     <p class="card-text">Experience tranquility and style at Vallito Villa...</p>
-                    <a class="btn btn-primary w-100" href="#">Learn More</a>
+                    <a class="btn btn-primary w-100" href="valito.html">Learn More</a>
                   </div>
                 </div>
               </div>
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <img alt="Card 4" class="card-img-top" src="assets/kies/kies1.jpg" />
+                  <div class="card-body">
+                    <h5 class="card-title">Kies Villas</h5>
+                    <p class="card-text">Relax in the modern charm of Kies Villas</p>
+                    <a class="btn btn-primary w-100" href="kies.html">Learn More</a>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
       </div>
   
       <!-- Second Slide -->
-      <div class="carousel-item">
+      <!-- <div class="carousel-item">
         <div class="collections-section py-4">
           <div class="container">
             <h2 class="text-center mb-4">Our Collections</h2>
@@ -245,7 +259,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   
     <!-- Carousel Controls -->
@@ -279,6 +293,8 @@
           </div>
       </div>
   </div>
+
+  
 
   <!-- Section 2 -->
   <div class="row section">
