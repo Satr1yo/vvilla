@@ -77,24 +77,52 @@ h2 {
 .hero-section .content p {
   font-size: 1.25rem;
 }
+
 /* booking form */
-.btn {
-  background-color: #8B6A4E
-}
-
 .booking-form {
-background-color: #faf8f9;
-padding: 20px;
-border-radius: 5px;
-margin-top: -50px;
- z-index: 1;
-position: relative;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #faf8f9;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: -50px;
+   z-index: 1;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+.booking-form .form-control {
+  height: 40px;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 4px;
 }
 
+.booking-form .btn-primary {
+  background-color: #8B6A4E;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  
+}
+
+.booking-form .form-placeholder {
+  font-size: 12px;
+  color: #6c757d;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.booking-form .mt-3 {
+  margin-top: 20px;
+}
+
+.booking-form .w-100 {
+  width: 100%;
+}
 
 /* carousel card */
 
+.btn {
+  background-color: #8B6A4E;
+}
 .collections-section h2 {
 text-align: center;
 margin-bottom: 30px;
@@ -129,7 +157,7 @@ object-fit: cover;
 .carousel-control-next-icon {
   filter: invert(100%);
 }
-
+/* carousel card */
 /* Styling untuk Section */
 .section {
   margin-bottom: 40px;
@@ -171,6 +199,27 @@ object-fit: cover;
   color: #333;
   line-height: 1.6;
   text-align: center; /* Pastikan rata tengah di layar kecil */
+}
+/* service card */
+.service-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 0;
+}
+.service-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.service-card h5 {
+  margin-top: 10px;
+  font-size: 1.25rem;
+}
+.service-card p {
+  font-size: 0.9rem;
+  color: #555555;
 }
 
         /* footer */
@@ -260,6 +309,8 @@ object-fit: cover;
       flex: 1 1 100%; /* Kolom mengambil lebar penuh */
       max-width: 100%; /* Hapus batas maksimum */
     }
+
+    
 }
 /* carousel pertama */
 .d-block.w-100 {

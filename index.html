@@ -4,17 +4,20 @@
   <title>
    Vibes Hospitality
   </title>
-  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://e1-booking.com/booking/css/bootstrap-datepicker3.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://e1-booking.com/booking/js/bootstrap-datepicker.js"></script>
+
+
   <link rel="stylesheet" href="style.css">
  </head>
  <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <img src="assets/logo.png" alt="" srcset=""> 
-
         <div class="container-fluid">
-          <!-- <img src="assets/logo.png" alt="" srcset="">  -->
-            <a class="navbar-brand" href="#">Vibes Hospitality</a>
+             <a class="navbar-brand" href="#">Vibes Hospitality</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,11 +27,8 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Service</a>
+                        <a class="nav-link" href="#service">Service</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Gallery</a>
-                  </li>
                   <li class="nav-item">
                       <a class="nav-link" href="#collections">Our Collections</a>
                   </li>
@@ -66,7 +66,7 @@
               <!-- Third Slide -->
               <div class="carousel-item">
                 <div class="hero-section">
-             <img src="assets/teraum/rooms/teraumm11.jpg" class="d-block w-100" alt="Hero Image">
+             <img src="assets/valito/rooms/valito1.jpg" class="d-block w-100" alt="Hero Image">
                   <div class="overlay"></div>
                   <div class="content">
                     <h1>Valito Villa</h1>
@@ -133,49 +133,42 @@
             </button>
           </div>
           
-  <div class="container booking-form">
-   <div class="row g-2">
-    <div class="col-12 col-sm-6 col-md-3">
-      <label class="form-placeholder" for="check-out">Choose Villa</label>
+          <div class="container booking-form">
+            <div class="row">
+               <div class="col-md-3">
+                  <label class="form-placeholder" for="villa">Choose Villa</label>
+                  <select id="pilihan" class="form-control" name="pilihan" onchange="window.location.href=this.value;">
+                     <option value="" disabled selected>Choose villa </option>
+                     <option value="teraum.html">Teraum Villa</option>
+                     <option value="valito.html">Valito Villa</option>
+                     <option value="kies.html">KIES Villas Lombok</option>
+                  </select>
+               </div>
+               <div class="col-md-3">
+                  <label class="form-placeholder" for="dpd1">Check In</label>
+                  <input placeholder="Check In" value="" type="text" class="form-control" id="dpd1" name="start" readonly>
+               </div>
+               <div class="col-md-3">
+                  <label class="form-placeholder" for="dpd2">Check Out</label>
+                  <input placeholder="Check Out" value="" type="text" class="form-control" id="dpd2" name="end" readonly>
+               </div>
+               <div class="col-md-2">
+                  <label class="form-placeholder" for="promo_code">Promo Code</label>
+                  <input id="promo_code" placeholder="Promo Code" type="text" class="form-control">
+               </div>
+               <div class="col-md-1">
+                  <button id="booking" type="button" class="btn btn-primary w-120">Book Now</button>
+               </div>
+            </div>
+         </div>
 
-      <select id="pilihan" class="form-control" name="pilihan" onchange="window.location.href=this.value;">
-        <option value="" disabled selected>Pilih Villa</option>
-            <!-- <option value="newtamansari.html">New Taman Sari</option> -->
-            <option value="teraum.html">Teraum Villa</option>
-            <option value="valito.html">Valito Villa</option>
-            <option value="kies.html">KIES Villas Lombok</option>
-            <!-- <option value="villagevibes">Village Vibes Lombok</option>
-            <option value="kiayazo">KIAYAZO Vibes Inn</option>
-            <option value="TIKAS">TIKAS Lombok</option>
-            <option value="sajang">Sajang Glamping & Coffee Specialties</option> -->
-        </select>
-    </div>
-    <div class="col-12 col-sm-6 col-md-3">
-      <label class="form-placeholder" for="check-out">Check In</label>
-      <input class="form-control" placeholder="check in" type="date"/>
-    </div>
-    <div class="col-12 col-sm-6 col-md-3">
-      <label class="form-placeholder" for="check-out">Check Out</label>
-     <input class="form-control" placeholder="check out" type="date"/>
-    </div>
-    <div class="col-md-2">
-      <label class="form-placeholder" for="check-out">Insert Promo Code</label>
-     <input class="form-control" placeholder="promo Code" type="text"/>
-    </div>
-    <div class="col-md-1">
-     <button class="btn btn-primary">
-      BOOK NOW
-     </button>
-    </div>
-   </div>
-  </div>
   <div id="collectionsCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <!-- First Slide -->
       <div class="carousel-item active">
         <div class="collections-section py-4">
           <div class="container">
-            <h2 class="text-center mb-4">Our Collections</h2>
+            <h2 class="text-center mb-4" id="collections">Our Collections</h2>
             <div class="row gy-4">
               <!-- <div class="col-md-4">
                 <div class="card h-100">
@@ -199,7 +192,7 @@
               </div>
               <div class="col-md-4">
                 <div class="card h-100">
-                  <img alt="Vallo Villa" class="card-img-top" src="assets/teraum/rooms/teraumm1.jpg" />
+                  <img alt="Vallo Villa" class="card-img-top" src="assets/valito/rooms/valito1.jpg" />
                   <div class="card-body">
                     <h5 class="card-title">Vallito Villa</h5>
                     <p class="card-text">Experience tranquility and style at Vallito Villa...</p>
@@ -277,44 +270,88 @@
  
 <!-- service card -->
 <div class="container">
-  <h2><center>Our Service </center></h2> <br>
-  <!-- Section 1 -->
-  <div class="row section">
-      <div class="col-md-6">
-          <img alt="Conference room with blue chairs and tables set up for a meeting" 
-              class="image" 
-              src="https://storage.googleapis.com/a1aa/image/MgjltUSHlspSAdMvcNVlGnaYSWgHgM2Hq22ibfAB8KxuDP5JA.jpg" />
-      </div>
-      <div class="col-md-6">
-          <div class="title">
-            Full Manage
-          </div>
-          <div class="description">
-            Vibes Hospitality is actively involved in the sales, marketing, and distributions in supporting the property’s strategy to ensure consistent results in maximizing hotel revenues.
-          </div>
-      </div>
+  <div class="row">
+    <h2><center>Service</center></h2>
+   <div class="col-md-6">
+    <div class="service-card d-flex align-items-center">
+     <img alt="Technical support image" height="100" src="https://storage.googleapis.com/a1aa/image/ak6eW4pn6D1f4EIcfI2TFaNu48VUqCjoze5K6PrZhbpdw6RPB.jpg" width="100"/>
+     <div class="ms-3">
+      <h5>
+       Technical Services
+      </h5>
+      <p>
+       Vibes Hospitality provides design and technical services for new projects, refurbishments, Rebrandings , or renovations. The services provided will comply with our standards, fulfilling significant needs accordingly.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="col-md-6">
+    <div class="service-card d-flex align-items-center">
+     <img alt="Pre Opening Team image" height="100" src="https://storage.googleapis.com/a1aa/image/mMjmakiwloqJAFgLdTgIZSxvRCOmpoq9OLsZrMRNzzfEWP6JA.jpg" width="100"/>
+     <div class="ms-3">
+      <h5>
+       Pre Opening Team
+      </h5>
+      <p>
+       With our guidelines and programs, Vibes Hospitality ensures efficiency and precision in ticking all the objectives of every phase from construction to property opening.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="col-md-6">
+    <div class="service-card d-flex align-items-center">
+     <img alt="Sales, Marketing &amp; Distribution image" height="100" src="https://storage.googleapis.com/a1aa/image/DAELGfp2ITTNXSyjzIKn6pKNmfYaKYpfNyfeqAce6o5MBrH9E.jpg" width="100"/>
+     <div class="ms-3">
+      <h5>
+       Sales, Marketing &amp; Distribution
+      </h5>
+      <p>
+       Revenue gaining is one of our main business targets. We, at VIBES Hospitality dedicate qualified team members, sales and marketing network, big database as well as distribution channel and system. This whole system is applied to all of our hotel units.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="col-md-6">
+    <div class="service-card d-flex align-items-center">
+     <img alt="Finance image" height="100" src="https://storage.googleapis.com/a1aa/image/2RfhSeO6tCkTtkNU5fu9bxaaJceqOHFYzHO7lMdemhPDh1jeE.jpg" width="100"/>
+     <div class="ms-3">
+      <h5>
+       Finance
+      </h5>
+      <p>
+       Vibes Hospitality focuses on supporting every ground of financial activities and management to achieve the highest profit.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="col-md-6">
+    <div class="service-card d-flex align-items-center">
+     <img alt="Full Manage image" height="100" src="https://storage.googleapis.com/a1aa/image/kUZwJFtxpOocEJ4r7uxeKItKGeUuSQy5EBn8u3gFFRbFseonA.jpg" width="100"/>
+     <div class="ms-3">
+      <h5>
+       Full Manage
+      </h5>
+      <p>
+       Vibes Hospitality is actively involved in the sales, marketing, and distributions in supporting the property's strategy to ensure consistent results in maximizing hotel revenues.
+      </p>
+     </div>
+    </div>
+   </div>
+   <!-- <div class="col-md-6">
+    <div class="service-card d-flex align-items-center">
+     <img alt="Finance image" height="100" src="https://storage.googleapis.com/a1aa/image/2RfhSeO6tCkTtkNU5fu9bxaaJceqOHFYzHO7lMdemhPDh1jeE.jpg" width="100"/>
+     <div class="ms-3">
+      <h5>
+       Finance
+      </h5>
+      <p>
+       Vibes Hospitality focuses on supporting every ground of financial activities and management to achieve the highest profit.
+      </p>
+     </div>
+    </div>
+   </div> -->
   </div>
-
-  
-
-  <!-- Section 2 -->
-  <div class="row section">
-      <div class="col-md-6">
-          <div class="title">
-            Sales, Marketing & Distribution
-          </div>
-          <div class="description">
-            “Revenue gaining is one of our main business targets. We, at ViBES Hospitality dedicate qualified team members, sales and marketing network, big database as well as distribution channel and system. This whole system is applied to all of our hotel units”
-          </div>
-      </div>
-      <div class="col-md-6">
-          <img alt="Conference room with red chairs and a chandelier" 
-              class="image" 
-              src="https://storage.googleapis.com/a1aa/image/CIatibq1f72vXS1qffYS0GY3A6fbwJuUv3Qt7X9Dwxfk7wTeE.jpg" />
-      </div>
-  </div>
-
-</div>
+ </div>
 <br>
 <br>
 
@@ -339,12 +376,47 @@
               <p>Address: Jl. Raya Kuta Mawun, Kuta - Praya, Nusa Tenggara Barat</p>
               <h5>Visit Us:</h5>
               <p><a href="http://www.vibeshotelsandresorts.com" target="_blank">www.vibeshotelsandresorts.com</a></p>
+              <h5>Follow Us:</h5>
+    <p>
+      <a href="https://www.instagram.com/vibeshospitality_id" target="_blank" style="text-decoration: none; color: inherit;">
+        <i class="fab fa-instagram"></i> vibeshospitality_id
+
+      </a>
+    </p>
+    <p>
+      
+      <a href="https://wa.me/6287723118686" target="_blank" style="text-decoration: none; color: inherit;">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </p>
           </div>
       </div>
       <div class="text-center mt-3">
           <p>&copy; 2024 Vibes Hospitality. All rights reserved.</p>
       </div>
   </div>
+
+  <script>
+    var nowTemp=new Date();
+    var now=new Date(nowTemp.getFullYear(),nowTemp.getMonth(),nowTemp.getDate(),0,0,0,0);
+    var checkin=$("#dpd1").datepicker({format:"dd-mm-yyyy",onRender:function(a){return a.valueOf()<now.valueOf()?"disabled":""}}).on("changeDate",function(b){if(b.date.valueOf()>checkout.date.valueOf()){var a=new Date(b.date);
+    a.setDate(a.getDate()+1);checkout.setValue(a)}checkin.hide();$("#dpd2")[0].focus()}).data("datepicker");
+    var checkout=$("#dpd2").datepicker({format:"dd-mm-yyyy",orientation:"top left",onRender:function(a){return a.valueOf()<=checkin.date.valueOf()?"disabled":""}}).on("changeDate",function(a){
+                                    var check_in=$("#dpd1").val();
+                                    var check_out=$("#dpd2").val();
+                                    checkout.hide();
+    }).data("datepicker");
+    
+    $( "#booking" ).click(function() {
+      var check_in=$("#dpd1").val();
+      var check_out=$("#dpd2").val();
+      var promo=$("#promo_code").val();
+      var property_id="5781";
+      window.open("https://e1-booking.com/booking/booking-page.php?checkin=" + check_in + "&checkout=" + check_out + "&id=" + property_id + "&promo=" + promo);
+  
+    });
+    
+  </script>
 </footer>
 
 
