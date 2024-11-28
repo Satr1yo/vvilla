@@ -1,0 +1,731 @@
+<html>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+   Village Vibes Lombok
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://e1-booking.com/booking/css/bootstrap-datepicker3.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://e1-booking.com/booking/js/bootstrap-datepicker.js"></script>
+
+  <link rel="stylesheet" href="vilagevibes.css">
+ </head>
+ <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img src="assets/logo.png" alt="" srcset=""> 
+
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Vibes Hospitality</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+               
+                <li class="nav-item">
+                  <a class="nav-link" href="#gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#room">Room</a>
+            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Village Vibes</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- First Slide -->
+        <div class="carousel-item active">
+          <div class="hero-section">
+            <img src="assets/vilvibes/rooms/vilvi1.jpg" class="d-block w-100" alt="Hero Image" >
+            <div class="overlay"></div>
+            <div class="content">
+              <h2>welcome to</h2>
+              <h2>Village Vibes Lombok</h2>
+            </div>
+          </div>
+        </div>
+        <!-- Second Slide -->
+        <div class="carousel-item">
+          <div class="hero-section">
+       <img src="assets/vilvibes/rooms/vilvi3.jpg" class="d-block w-100" alt="Hero Image">
+            <div class="overlay"></div>
+            <div class="content">
+             <h2>Nature Vibes</h2>
+            </div>
+          </div>
+        </div>
+        <!-- Third Slide -->
+        <div class="carousel-item">
+          <div class="hero-section">
+       <img src="assets/vilvibes/rooms/vilvi4.jpg" class="d-block w-100" alt="Hero Image">
+            <div class="overlay"></div>
+            <div class="content">
+               <h2>Private Pool</h2>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="hero-section">
+       <img src="assets/vilvibes/rooms/vilvi5.jpg" class="d-block w-100" alt="Hero Image">
+            <div class="overlay"></div>
+            <div class="content">
+               <h2>Small Eatery</h2>
+            </div>
+          </div>
+        </div>
+
+        
+
+        
+        <!-- Add more slides as needed -->
+      </div>
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+          
+    <div class="container booking-form">
+      <div class="row">
+         <div class="col-md-3">
+            <label class="form-placeholder" for="villa">Choose Villa</label>
+            <select id="pilihan" class="form-control" name="pilihan" onchange="window.location.href=this.value;">
+               <option value="" disabled selected>Village Vibes</option>
+               <option value="vilagevibes.html">Village Vibes Lombok</option>
+               <option value="teraum.html">Teraum Villa</option>
+               <option value="valito.html">Valito Villa</option>
+               <option value="kies.html">KIES Villas Lombok</option>
+            </select>
+         </div>
+         <div class="col-md-3">
+            <label class="form-placeholder" for="dpd1">Check In</label>
+            <input placeholder="Check In" value="" type="text" class="form-control" id="dpd1" name="start" readonly>
+         </div>
+         <div class="col-md-3">
+            <label class="form-placeholder" for="dpd2">Check Out</label>
+            <input placeholder="Check Out" value="" type="text" class="form-control" id="dpd2" name="end" readonly>
+         </div>
+         <div class="col-md-2">
+            <label class="form-placeholder" for="promo_code">Promo Code</label>
+            <input id="promo_code" placeholder="Promo Code" type="text" class="form-control">
+         </div>
+         <div class="col-md-1">
+            <button id="booking" type="button" class="btn btn-primary w-120">Book Now</button>
+         </div>
+      </div>
+   </div>
+   
+  
+  <!-- card -->
+  <div class="container mt-4">
+   
+    <div class="row">
+     
+      <h2 id="gallery"><center>GALLERY</center></h2>
+      <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+        <center> Featuring a garden, Village Vibes Lombok is located in Kuta Lombok in the Lombok region, a 19-minute walk from Kuta Beach and 5 km from Selong Belanak Beach. Boasting room service, this property also provides guests with a terrace. Tanjung Aan Beach is 8 km from the hotel.</center></p>
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
+    
+          <div class="service-card">
+            <img alt="villas" src="assets/vilvibes/rooms/vilvi2.jpg" class="img-fluid" />
+            <div class="overlay">
+              Villas
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
+          <div class="service-card">
+            <img alt="Beautifull View" src="assets/vilvibes/rooms/vilvi7.jpg" class="img-fluid"/>
+            <div class="overlay">
+              Mini Garden
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
+         
+          <div class="service-card">
+            <img alt="Elegant Room" src="assets/vilvibes/rooms/vilvi10.jpg" class="img-fluid"/>
+            <div class="overlay">
+              Elegant Room
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Card 4 -->
+      <div class="col-md-4 mb-4">
+           <div class="service-card">
+            <img alt="Dining area with a variety of food and elegant decor" src="assets/vilvibes/rooms/vilvi8.jpg" class="img-fluid"/>
+            <div class="overlay">
+              Small Eatery
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Card 5 -->
+      <div class="col-md-4 mb-4">
+           <div class="service-card">
+            <img alt="Terace" src="assets/vilvibes/rooms/vilvi9.jpg" class="img-fluid"/>
+            <div class="overlay">
+              Terace
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Card 6 -->
+      <div class="col-md-4 mb-4">
+    
+          <div class="service-card">
+            <img alt="Pool" src="assets/vilvibes/rooms/vilvi6.jpg" class="img-fluid"/>
+            <div class="overlay">
+              Pool
+            </div>
+          </div>
+        </a>
+      </div>
+    
+    </div>
+  </div>
+   <br> <br>
+   <!-- room -->
+   <div class="container">
+    <h2 id="room"><center>ROOM</center></h2> <br> <br>
+    <div class="row">
+      <!-- standar -->
+      <div class="col-md-6">
+        <div class="room-card">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Carousel -->
+              <div id="roomImageCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <!-- Slide 1 -->
+                  <div class="carousel-item active">
+                    <img alt="Interior view of Bungalow Queen" height="300" src="assets/valito/rooms/standar1.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="carousel-item">
+                    <img alt="Interior view of Bungalow Queen" height="300" src="assets/valito/rooms/standar2.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="carousel-item">
+                    <img alt="Interior view of Bungalow Queen" height="300" src="assets/valito/rooms/standar3.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Slide 4 -->
+                  <div class="carousel-item">
+                    <img alt="Interior view of Bungalow Queen" height="300" src="assets/valito/rooms/standar4.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Slide 5 -->
+                  <div class="carousel-item">
+                    <img alt="Interior view of Bungalow Queen" height="300" src="assets/valito/rooms/standar5.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Add more slides here -->
+                </div>
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#roomImageCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#roomImageCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="room-details">
+                <div class="room-title">
+                  SASAK SINGLE ROOM (STANDARD SINGLE)
+                </div>
+                <div class="room-info" data-room="sasak">
+                  More Information
+                </div>
+                <div class="room-price">
+                  Start From
+                  <br />
+                  Rp 400.000
+                  <br />
+                  Price for 1 night
+                </div>
+              </div>
+              <div class="room-rates">
+                <div>
+                  <span>
+                    1 x
+                    <i class="fas fa-user"></i>
+                    (incl)
+                  </span>
+                  <span>
+                    Room Breakfast
+                    <i class="fas fa-utensils"></i>
+                  </span>
+                  <span>
+                    <i class="fas fa-info-circle"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="room-total">
+                <div class="price">
+                  Rp 400.000
+                  <br />
+                  Price for 1 night(s)
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- junior-->
+      <div class="col-md-6">
+        <div class="room-card">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Carousel -->
+              <div id="roomImageCarouseljunior" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <!-- Slide 1 -->
+                  <div class="carousel-item active">
+                    <img alt="Interior view of deluxe" height="300" src="assets/valito/rooms/junior1.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="carousel-item">
+                    <img alt="Interior view of deluxe" height="300" src="assets/valito/rooms/junior2.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="carousel-item">
+                    <img alt="Interior view of deluxe" height="300" src="assets/valito/rooms/junior3.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Slide 4 -->
+                  <div class="carousel-item">
+                    <img alt="Interior view of deluxe" height="300" src="assets/valito/rooms/junior4.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Slide 5 -->
+                  <div class="carousel-item">
+                    <img alt="Interior view of deluxe" height="300" src="assets/valito/rooms/junior5.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Add more slides here -->
+                </div>
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#roomImageCarouseljunior" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#roomImageCarouseljunior" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="room-details">
+                <div class="room-title">
+                  PALM BUNGALOW (SUPERIOR BUNGALOW)
+                </div>
+                <div class="room-info" data-room="palm">
+                  More Information
+                </div>
+                <div class="room-price">
+                  Start From
+                  <br />
+                  Rp 845.000
+
+                  <br />
+                  Price for 1 night
+                </div>
+              </div>
+              <div class="room-rates">
+                <div>
+                  <span>
+                    2 x
+                    <i class="fas fa-user"></i>
+                    (incl)
+                  </span>
+                  <span>
+                    Room Breakfast
+                    <i class="fas fa-utensils"></i>
+                  </span>
+                  <span>
+                    <i class="fas fa-info-circle"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="room-total">
+                <div class="price">
+                  Rp 845.000
+                  <br />
+                  Price for 1 night(s)
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- master -->
+      <div class="col-md-6">
+        <div class="room-card">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Carousel -->
+              <div id="roomImageCarouselmaster" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <!-- Slide 1 -->
+                  <div class="carousel-item active">
+                    <img alt="Interior view of deluxe" height="300" src="assets/valito/rooms/master1.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="carousel-item">
+                    <img alt="Interior view of deluxe" height="300" src="assets/valito/rooms/master2.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="carousel-item">
+                    <img alt="Interior view of deluxe" height="300" src="assets/valito/rooms/master3.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Slide 4 -->
+                  <div class="carousel-item">
+                    <img alt="Interior view of deluxe" height="300" src="assets/valito/rooms/master4.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Slide 5 -->
+                  <div class="carousel-item">
+                    <img alt="Interior view of deluxe" height="300" src="assets/valito/rooms/master5.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Slide 5 -->
+                  <div class="carousel-item">
+                    <img alt="Interior view of deluxe" height="300" src="assets/valito/rooms/master6.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Add more slides here -->
+                </div>
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#roomImageCarouselmaster" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#roomImageCarouselmaster" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="room-details">
+                <div class="room-title">
+                  PRABU ROOM (DELUXE ROOM)
+                </div>
+                <div class="room-info" data-room="prabu">
+                  More Information
+                </div>
+                <div class="room-price">
+                  Start From
+                  <br />
+                  Rp 1.110.000
+
+                  <br />
+                  Price for 1 night
+                </div>
+              </div>
+              <div class="room-rates">
+                <div>
+                  <span>
+                    2 x
+                    <i class="fas fa-user"></i>
+                    (incl)
+                  </span>
+                  <span>
+                    Room Breakfast
+                    <i class="fas fa-utensils"></i>
+                  </span>
+                  <span>
+                    <i class="fas fa-info-circle"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="room-total">
+                <div class="price">
+                  Rp 1.110.000
+                  <br />
+                  Price for 1 night(s)
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- junior-->
+      <div class="col-md-6">
+        <div class="room-card">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Carousel -->
+              <div id="roomImageCarouseljunior" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <!-- Slide 1 -->
+                  <div class="carousel-item active">
+                    <img alt="Interior view of deluxe" height="300" src="assets/valito/rooms/junior1.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="carousel-item">
+                    <img alt="Interior view of deluxe" height="300" src="assets/valito/rooms/junior2.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="carousel-item">
+                    <img alt="Interior view of deluxe" height="300" src="assets/valito/rooms/junior3.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Slide 4 -->
+                  <div class="carousel-item">
+                    <img alt="Interior view of deluxe" height="300" src="assets/valito/rooms/junior4.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Slide 5 -->
+                  <div class="carousel-item">
+                    <img alt="Interior view of deluxe" height="300" src="assets/valito/rooms/junior5.jpg" class="d-block w-100" />
+                  </div>
+                  <!-- Add more slides here -->
+                </div>
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#roomImageCarouseljunior" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#roomImageCarouseljunior" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="room-details">
+                <div class="room-title">
+                  PRABU SUITE
+                </div>
+                <div class="room-info" data-room="prabusuite">
+                  More Information
+                </div>
+                <div class="room-price">
+                  Start From
+                  <br />
+                  Rp 845.000
+
+                  <br />
+                  Price for 1 night
+                </div>
+              </div>
+              <div class="room-rates">
+                <div>
+                  <span>
+                    2 x
+                    <i class="fas fa-user"></i>
+                    (incl)
+                  </span>
+                  <span>
+                    Room Breakfast
+                    <i class="fas fa-utensils"></i>
+                  </span>
+                  <span>
+                    <i class="fas fa-info-circle"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="room-total">
+                <div class="price">
+                  Rp 845.000
+                  <br />
+                  Price for 1 night(s)
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+</div>
+   <br><br>
+     <!-- facilities -->
+   <div class="container mt-4 text-center">
+    <h2 class="mb-3">FACILITIES</h2>
+    <br>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4 d-flex align-items-center mb-2">
+        <i class="fas fa-check-circle text-success me-2"></i> Wifi
+      </div>
+      <div class="col-md-6 col-lg-4 d-flex align-items-center mb-2">
+        <i class="fas fa-check-circle text-success me-2"></i> Pool
+      </div>
+      <div class="col-md-6 col-lg-4 d-flex align-items-center mb-2">
+        <i class="fas fa-check-circle text-success me-2"></i> Parking
+      </div>
+      <div class="col-md-6 col-lg-4 d-flex align-items-center mb-2">
+        <i class="fas fa-check-circle text-success me-2"></i> Frontdesk
+      </div>
+      <div class="col-md-6 col-lg-4 d-flex align-items-center mb-2">
+        <i class="fas fa-check-circle text-success me-2"></i> Security Guards
+      </div>
+      <div class="col-md-6 col-lg-4 d-flex align-items-center mb-2">
+        <i class="fas fa-check-circle text-success me-2"></i> Cleaning Services
+      </div>
+      <div class="col-md-6 col-lg-4 d-flex align-items-center mb-2">
+        <i class="fas fa-check-circle text-success me-2"></i> Luggage Storage
+      </div>
+      <div class="col-md-6 col-lg-4 d-flex align-items-center mb-2">
+        <i class="fas fa-check-circle text-success me-2"></i> Laundry
+      </div>
+      <div class="col-md-6 col-lg-4 d-flex align-items-center mb-2">
+        <i class="fas fa-check-circle text-success me-2"></i> Non Smoking
+      </div>
+    </div>
+  </div>
+  
+  <br><br>
+
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Bagian Kiri -->
+            <div class="col-md-6 col-sm-12" id="about">
+                <h1>About Village Vibes</h1>
+                <p>
+                  Featuring a garden, Village Vibes Lombok is located in Kuta Lombok in the Lombok region, a 19-minute walk from Kuta Beach and 5 km from Selong Belanak Beach. Boasting room service, this property also provides guests with a terrace. Tanjung Aan Beach is 8 km from the hotel.
+                 </p>
+            </div>
+  
+            <!-- Bagian Kanan -->
+            <div class="col-md-6 col-sm-12">
+                <h5>Contact Us</h5>
+                <p>Email: info@vibeshotelsandresorts.com</p>
+                <p>Phone: +62 812 3456 7890</p>
+                <p>Address: Jl. Mawun No.3, Kuta, Kec. Pujut, Kabupaten Lombok Tengah, Nusa Tenggara Bar. 83573, Indonesia </p>
+                <h5>Visit Us:</h5>
+                <p><a href="http://www.vibeshotelsandresorts.com" target="_blank">www.vibeshotelsandresorts.com</a></p>
+                <h5>Follow Us:</h5>
+                <p>
+                  <a href="https://www.instagram.com/vibeshospitality_id" target="_blank" style="text-decoration: none; color: inherit;">
+                    <i class="fab fa-instagram"></i> vibeshospitality_id
+            
+                  </a>
+                </p>
+                <p>
+                  
+                  <a href="https://wa.me/6287723118686" target="_blank" style="text-decoration: none; color: inherit;">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                  </a>
+                </p>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <p>&copy; 2024 Vibes Hospitality. All rights reserved....</p>
+        </div>
+    </div>
+  </footer>
+
+  <!-- Pop-up Modal -->
+  <div class="modal fade" id="roomModal" tabindex="-1" aria-labelledby="roomModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRoomTitle"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="modalRoomDescription"></p>
+          <p id="modalRoomPrice"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script>
+    const roomData = {
+      sasak: {
+        title: "SASAK SINGLE ROOMS",
+        description: "Featuring a garden, Village Vibes Lombok is located in Kuta Lombok in the Lombok region, a 19-minute walk from Kuta Beach and 5 km from Selong Belanak Beach. Boasting room service, this property also provides guests with a terrace. Tanjung Aan Beach is 8 km from the hotel. At the hotel, every room is fitted with a desk. Rooms have air conditioning, and some units at Village Vibes Lombok have a terrace. At the accommodation every room has a seating area. Guests can enjoy daily breakfast with a choice of Continental and American options at any time during the day."
+      },
+      palm: {
+        title: "PALM BUNGALOW",
+        description: "Featuring a garden, Village Vibes Lombok is located in Kuta Lombok in the Lombok region, a 19-minute walk from Kuta Beach and 5 km from Selong Belanak Beach. Boasting room service, this property also provides guests with a terrace. Tanjung Aan Beach is 8 km from the hotel. At the hotel, every room is fitted with a desk. Rooms have air conditioning, and some units at Village Vibes Lombok have a terrace. At the accommodation every room has a seating area. Guests can enjoy daily breakfast with a choice of Continental and American options at any time during the day."
+
+      },
+      prabu: {
+        title: "PRABU ROOM",
+        description: "Featuring a garden, Village Vibes Lombok is located in Kuta Lombok in the Lombok region, a 19-minute walk from Kuta Beach and 5 km from Selong Belanak Beach. Boasting room service, this property also provides guests with a terrace. Tanjung Aan Beach is 8 km from the hotel. At the hotel, every room is fitted with a desk. Rooms have air conditioning, and some units at Village Vibes Lombok have a terrace. At the accommodation every room has a seating area. Guests can enjoy daily breakfast with a choice of Continental and American options at any time during the day."
+      },
+      prabusuite: {
+        title: "PRABU SUITE",
+        description: "Featuring a garden, Village Vibes Lombok is located in Kuta Lombok in the Lombok region, a 19-minute walk from Kuta Beach and 5 km from Selong Belanak Beach. Boasting room service, this property also provides guests with a terrace. Tanjung Aan Beach is 8 km from the hotel. At the hotel, every room is fitted with a desk. Rooms have air conditioning, and some units at Village Vibes Lombok have a terrace. At the accommodation every room has a seating area. Guests can enjoy daily breakfast with a choice of Continental and American options at any time during the day."
+
+      }
+    };
+
+    const modal = document.getElementById("roomModal");
+    const modalTitle = document.getElementById("modalRoomTitle");
+    const modalDescription = document.getElementById("modalRoomDescription");
+    const modalPrice = document.getElementById("modalRoomPrice");
+
+    document.querySelectorAll(".room-info").forEach(info => {
+      info.addEventListener("click", () => {
+        const roomKey = info.getAttribute("data-room");
+        const room = roomData[roomKey];
+
+        modalTitle.textContent = room.title;
+        modalDescription.textContent = room.description;
+        modalPrice.textContent = room.price;
+
+        const bootstrapModal = new bootstrap.Modal(modal);
+        bootstrapModal.show();
+      });
+    });
+  </script>
+
+<script>
+  var nowTemp=new Date();
+  var now=new Date(nowTemp.getFullYear(),nowTemp.getMonth(),nowTemp.getDate(),0,0,0,0);
+  var checkin=$("#dpd1").datepicker({format:"dd-mm-yyyy",onRender:function(a){return a.valueOf()<now.valueOf()?"disabled":""}}).on("changeDate",function(b){if(b.date.valueOf()>checkout.date.valueOf()){var a=new Date(b.date);
+  a.setDate(a.getDate()+1);checkout.setValue(a)}checkin.hide();$("#dpd2")[0].focus()}).data("datepicker");
+  var checkout=$("#dpd2").datepicker({format:"dd-mm-yyyy",orientation:"top left",onRender:function(a){return a.valueOf()<=checkin.date.valueOf()?"disabled":""}}).on("changeDate",function(a){
+                                  var check_in=$("#dpd1").val();
+                                  var check_out=$("#dpd2").val();
+                                  checkout.hide();
+  }).data("datepicker");
+  
+  $( "#booking" ).click(function() {
+    var check_in=$("#dpd1").val();
+    var check_out=$("#dpd2").val();
+    var promo=$("#promo_code").val();
+    var property_id="14013";
+    window.open("https://e1-booking.com/booking/booking-page.php?checkin=" + check_in + "&checkout=" + check_out + "&id=" + property_id + "&promo=" + promo);
+
+  });
+  
+</script>
+  
+
+ </body>
+</html>
